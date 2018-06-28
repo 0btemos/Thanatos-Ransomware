@@ -69,6 +69,6 @@ PDB path : C:\Users\Artur\Desktop\csharp - js\косте пизда\Release\Than
 
 [![Download Released ThanatosDecryptor]](https://github.com/0btemos/Thanatos-Ransomware/tree/master/Release)
 
-## Know Struct Thanatos Ransomware and check Source Code
+## Know Structure Thanatos Ransomware and check Source Code
 
 You can check source code from [![Here]](https://github.com/0btemos/Thanatos-Ransomware/tree/master/ThanatosSource)
