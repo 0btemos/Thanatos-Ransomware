@@ -35,7 +35,7 @@ PDB path : C:\Users\Artur\Desktop\csharp - js\косте пизда\Release\Than
 
 ![What they Need](https://1.bp.blogspot.com/-6o-rF1br8oA/WzJOxkbzILI/AAAAAAAAArc/xi9faoPTVMkQ8aklSg4sTly1Eq6ri1tdwCLcBGAs/s640/image9.png)
 
-##### Let's take a loock at source code 
+##### Let's take a look at source code :
 
 ![](https://raw.githubusercontent.com/0btemos/Thanatos-Ransomware/master/images/2018-06-28_121655.png)
 
@@ -44,3 +44,31 @@ PDB path : C:\Users\Artur\Desktop\csharp - js\косте пизда\Release\Than
 ![Decrypt Key](https://raw.githubusercontent.com/0btemos/Thanatos-Ransomware/master/images/2018-06-28_121954.png)
 
 ![](https://raw.githubusercontent.com/0btemos/Thanatos-Ransomware/master/images/2018-06-28_122110.png)
+
+## Yara Rules
+` rule Thanatos
+
+{
+        strings:
+
+        $s1 = ".THANATOS\x00" ascii
+        $s2 = "\\Desktop\\README.txt" ascii
+        $s3 = "C:\\Windows\\System32\\notepad.exe C:\\Users\\" ascii
+        $s4 = "AppData\\Roaming" ascii
+        $s5 = "\\Desktop\x00" ascii
+        $s6 = "\\Favourites\x00" ascii
+        $s7 = "\\OneDrive\x00" ascii
+        $s8 = "\\x00.exe\x00" ascii
+        $s9 = "/c taskkill /im" ascii
+        $s10 = "Software\\Microsoft\\Windows\\CurrentVersion\\Run" ascii
+
+        condition:
+        6 of ($s1, $s2, $s3, $s4, $s5, $s6, $s7, $s8, $s9, $s10)
+} `
+### Decrypt Files :
+
+[![Download Released ThanatosDecryptor]](https://github.com/0btemos/Thanatos-Ransomware/tree/master/Release)
+
+## Know Struct Thanatos Ransomware and check Source Code
+
+You can check source code from [![Here]](https://github.com/0btemos/Thanatos-Ransomware/tree/master/ThanatosSource)
